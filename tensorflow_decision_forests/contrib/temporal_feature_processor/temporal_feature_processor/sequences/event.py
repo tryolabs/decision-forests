@@ -1,3 +1,3 @@
-from pandas import DataFrame as EventSequence
+from pandas import DataFrame as EventSequence  # noqa
 
 # TODO: implement EventSequence class

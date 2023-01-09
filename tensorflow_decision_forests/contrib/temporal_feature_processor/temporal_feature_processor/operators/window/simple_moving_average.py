@@ -17,7 +17,8 @@ class SimpleMovingAverageOperator(WindowOperator):
         input: EventSequence,
     ) -> EventSequence:
         """Apply a simple moving average to an event.
-        If input has more than one feature, the moving average will be computed for each of its features independently.
+        If input has more than one feature, the moving average will be computed for each of its
+        features independently.
 
         Args:
             input (EventSequence): the input event to apply a simple moving average to.

@@ -1,1 +1,1 @@
-from .event import EventSequence
+from .event import EventSequence  # noqa
