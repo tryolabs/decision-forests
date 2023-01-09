@@ -1,6 +1,6 @@
 from pandas import Timedelta
 
-from temporal_feature_processor.sampling import Sampling
+from temporal_feature_processor.sampling.sampling import Sampling
 
 from ..base import Operator
 
