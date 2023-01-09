@@ -1,4 +1,3 @@
-
 load("//temporal_feature_processor/utils:compile.bzl", "all_proto_library")
 
 package(
@@ -13,7 +12,12 @@ py_library(
     name = "temporal_feature_processor",
     srcs = ["__init__.py"],
     srcs_version = "PY3",
-    deps = [":core"],
+    deps = [
+        ":core",
+        "//temporal_feature_processor/operators",
+        "//temporal_feature_processor/sampling",
+        "//temporal_feature_processor/sequences",
+    ],
 )
 
 py_library(

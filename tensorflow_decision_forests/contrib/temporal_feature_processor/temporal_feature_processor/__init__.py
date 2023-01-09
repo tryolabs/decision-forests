@@ -17,5 +17,8 @@
 __version__ = "0.0.1"
 
 from temporal_feature_processor import core
+from temporal_feature_processor import operators
+from temporal_feature_processor import sampling
+from temporal_feature_processor import sequences
 
 does_nothing = core.does_nothing
