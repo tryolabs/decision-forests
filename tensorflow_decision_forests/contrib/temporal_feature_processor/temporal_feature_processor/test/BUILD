@@ -31,6 +31,7 @@ py_test(
         "//temporal_feature_processor/core/data:event",
         "//temporal_feature_processor/core/data:sampling",
         "//temporal_feature_processor/core/operators:assign",
+        "//temporal_feature_processor/core/operators:simple_moving_average",
         "//temporal_feature_processor/implementation/pandas/data:event",
     ],
 )
