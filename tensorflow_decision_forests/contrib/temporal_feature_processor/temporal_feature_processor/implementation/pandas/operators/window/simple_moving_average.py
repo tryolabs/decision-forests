@@ -66,20 +66,15 @@ class PandasSimpleMovingAverageOperator(PandasWindowOperator):
       timestamp = values[-1]
 
       # filter by index_value
-      data_filtered = (
-          data_no_index[(data_no_index[index_columns] == index_value).squeeze()]
-          if index_columns
-          else data_no_index
-      )
+      data_filtered = (data_no_index[(data_no_index[index_columns]
+                                      == index_value).squeeze()]
+                       if index_columns else data_no_index)
 
       # filter by window start/end dates
       data_filtered = data_filtered[
-          (data_filtered[timestamp_column] <= timestamp)
-          & (
-              data_filtered[timestamp_column]
-              >= timestamp - pd.Timedelta(self.window_length)
-          )
-      ]
+          (data_filtered[timestamp_column] <= timestamp) &
+          (data_filtered[timestamp_column] >= timestamp -
+           pd.Timedelta(self.window_length))]
 
       # calculate average of window
       mean = data_filtered.set_index(sampling.names).mean(axis=0).values
